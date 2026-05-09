@@ -26,7 +26,7 @@ namespace RPG
             Name = name;
             HP = 100;
             MaxHP = 100;
-            gold = 0;
+            gold = 99999;
             consoleUI = ui;
             weapon = new Weapon(0, 0, "Ржавый кинжал", 10, "Всё легенды откуда-то начинали.");
         }

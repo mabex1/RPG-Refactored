@@ -14,6 +14,7 @@ namespace RPG
             enemys.Add(new Enemy(50, 50, 10, "Гоблин", 2));
             enemys.Add(new Enemy(30, 30, 15, "Скелет", 5));
             enemys.Add(new Ghost());
+            enemys.Add(new Enemy(70, 70, 7, "Мертвец", 4));
         }
     }
 }

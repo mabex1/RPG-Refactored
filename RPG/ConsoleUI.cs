@@ -270,5 +270,11 @@ namespace RPG
             Console.WriteLine($"Вы успешно не купили {item.Name}!");
             Console.WriteLine($"не {item.Description}");
         }
+
+        public void GameEnd(Player player)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"Герой {player.Name} окончил приключение с {player.gold} золота и оружием {player.weapon.Name}!");
+        }
     }
 }

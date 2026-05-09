@@ -83,6 +83,11 @@ namespace RPG
                 {
                     _player.AddHeal(select.Price);
                 }
+                else if (select.GetType() == typeof(ItemEndGame))
+                {
+                    consoleUI.GameEnd(_player);
+                    Environment.Exit(0);
+                }
                 else
                 {
                     consoleUI.WarnItemTypeNotExists();
