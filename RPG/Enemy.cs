@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.Marshalling;
 using System.Text;
 
@@ -37,10 +38,13 @@ namespace RPG
 
     class Ghost : Enemy
     {
+        private const int GHOST_MAX_DODGE_CHANCE = 11;
+        private const int GHOST_MIN_DODGE_CHANCE = 0;
+        private const int GHOST_SUCCESS_DODGE = 3;
         override public void TakeDamage(int damage)
         {
-            int Rand = Random.Shared.Next(0, 11);
-            if (Rand >= 3)
+            int Rand = Random.Shared.Next(GHOST_MIN_DODGE_CHANCE, GHOST_MAX_DODGE_CHANCE);
+            if (Rand >= GHOST_SUCCESS_DODGE)
             {
                 //логика уклонения в будущем
                 consoleUI.EnemyGhostDodge(this); 
